@@ -1,1 +1,1 @@
-<?php echo 'hello'; ?>
+<?php echo 'Hello Happy Monster with Cloudflare Page!!'; ?>
