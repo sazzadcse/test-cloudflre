@@ -46,7 +46,7 @@ function commit() {
     shell_exec("git commit -m 'Add random files' 2>&1");
 
     // Push the commit to the remote repository
-    shell_exec("git push origin master 2>&1");
+    shell_exec("git push origin dev");
     echo "<br/>Done";
   }
 
