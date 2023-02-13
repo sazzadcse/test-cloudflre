@@ -40,10 +40,10 @@ function commit() {
     // shell_exec('mkdir "testfolder"');
 
     // Add the file you want to commit and push
-    shell_exec("git add {$filename} 2>&1");
+    shell_exec("git add . 2>&1");
 
     // Commit the file with a message
-    shell_exec("git commit -m 'Add random file {$filename}' 2>&1");
+    shell_exec("git commit -m 'Add random files' 2>&1");
 
     // Push the commit to the remote repository
     shell_exec("git push origin dev 2>&1");
