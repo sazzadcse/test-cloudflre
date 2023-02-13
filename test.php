@@ -26,24 +26,32 @@ function commit() {
 
   if (is_callable('shell_exec') && false === stripos(ini_get('disable_functions'), 'shell_exec')) {
     $random = mt_rand(10, 10000000);
-    $filename  = "Hello{$random}.txt";
-    echo "<br/>Filename {$filename}";
-    $repo_path = __DIR__;
-    $absolute_file_path = __DIR__ . "/{$filename}";
+    // $filename  = "Hello{$random}.txt";
+    // echo "<br/>Filename {$filename}";
+    // $repo_path = __DIR__;
+    // $absolute_file_path = __DIR__ . "/{$filename}";
     // echo $absolute_file_path;die;
 
-    file_put_contents($absolute_file_path, "Random Number {$random}");
+    // file_put_contents($absolute_file_path, "Random Number {$random}");
 
     // Change to the repository directory
-    chdir($repo_path);
+    // chdir($repo_path);
 
     // shell_exec('mkdir "testfolder"');
 
+    
+    echo '<br/>';
+    echo shell_exec('sudo -u Sazzad -S');
+
+    echo "<br>";  
+    echo shell_exec('whoami');
+    die;
     // Add the file you want to commit and push
     shell_exec("git add . 2>&1");
 
     // Commit the file with a message
     shell_exec("git commit -m 'Add random files' 2>&1");
+
 
     // Push the commit to the remote repository
     shell_exec("git push origin dev");
